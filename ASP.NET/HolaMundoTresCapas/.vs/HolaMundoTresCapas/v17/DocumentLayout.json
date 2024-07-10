@@ -1,0 +1,104 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Dav Pru\\mi repo\\TichJunio2024David\\TEMA ASP.NET\\HolaMundoTresCapas\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2AE02046-3008-4595-B7D1-89CFDA287B19}|Presentacion\\Presentacion.csproj|c:\\dav pru\\mi repo\\tichjunio2024david\\tema asp.net\\holamundotrescapas\\presentacion\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{2AE02046-3008-4595-B7D1-89CFDA287B19}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Dav Pru\\Sem 1 cdmx\\Fondo de inversion\\FondosInversi\u00F3n\\Presentacion\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17610155-4AA5-4250-81B8-DF93EBC0E4D5}|Data\\CapaData.csproj|C:\\Dav Pru\\mi repo\\TichJunio2024David\\TEMA ASP.NET\\HolaMundoTresCapas\\data\\dalumnos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17610155-4AA5-4250-81B8-DF93EBC0E4D5}|Data\\CapaData.csproj|solutionrelative:data\\dalumnos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17610155-4AA5-4250-81B8-DF93EBC0E4D5}|Data\\CapaData.csproj|C:\\Dav Pru\\mi repo\\TichJunio2024David\\TEMA ASP.NET\\HolaMundoTresCapas\\data\\idalumno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17610155-4AA5-4250-81B8-DF93EBC0E4D5}|Data\\CapaData.csproj|solutionrelative:data\\idalumno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFB4EA2D-6964-42DF-8C7E-3CD76003C545}|CapaNegocio\\CapaNegocio.csproj|C:\\Dav Pru\\mi repo\\TichJunio2024David\\TEMA ASP.NET\\HolaMundoTresCapas\\capanegocio\\cnalumno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFB4EA2D-6964-42DF-8C7E-3CD76003C545}|CapaNegocio\\CapaNegocio.csproj|solutionrelative:capanegocio\\cnalumno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Dav Pru\\Sem 1 cdmx\\Fondo de inversion\\FondosInversi\u00F3n\\Presentacion\\appsettings.json",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Sem 1 cdmx\\Fondo de inversion\\FondosInversi\u00F3n\\Presentacion\\appsettings.json",
+              "ToolTip": "C:\\Dav Pru\\Sem 1 cdmx\\Fondo de inversion\\FondosInversi\u00F3n\\Presentacion\\appsettings.json*",
+              "RelativeToolTip": "..\\..\\..\\..\\Sem 1 cdmx\\Fondo de inversion\\FondosInversi\u00F3n\\Presentacion\\appsettings.json*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-07-08T04:16:02.19Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Dav Pru\\mi repo\\TichJunio2024David\\TEMA ASP.NET\\HolaMundoTresCapas\\Presentacion\\Web.config",
+              "RelativeDocumentMoniker": "Presentacion\\Web.config",
+              "ToolTip": "C:\\Dav Pru\\mi repo\\TichJunio2024David\\TEMA ASP.NET\\HolaMundoTresCapas\\Presentacion\\Web.config",
+              "RelativeToolTip": "Presentacion\\Web.config",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAACwAAABMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-07-08T03:23:39.768Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CNAlumno.cs",
+              "DocumentMoniker": "C:\\Dav Pru\\mi repo\\TichJunio2024David\\TEMA ASP.NET\\HolaMundoTresCapas\\CapaNegocio\\CNAlumno.cs",
+              "RelativeDocumentMoniker": "CapaNegocio\\CNAlumno.cs",
+              "ToolTip": "C:\\Dav Pru\\mi repo\\TichJunio2024David\\TEMA ASP.NET\\HolaMundoTresCapas\\CapaNegocio\\CNAlumno.cs",
+              "RelativeToolTip": "CapaNegocio\\CNAlumno.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA0AAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-08T02:37:00.911Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IDAlumno.cs",
+              "DocumentMoniker": "C:\\Dav Pru\\mi repo\\TichJunio2024David\\TEMA ASP.NET\\HolaMundoTresCapas\\Data\\IDAlumno.cs",
+              "RelativeDocumentMoniker": "Data\\IDAlumno.cs",
+              "ToolTip": "C:\\Dav Pru\\mi repo\\TichJunio2024David\\TEMA ASP.NET\\HolaMundoTresCapas\\Data\\IDAlumno.cs",
+              "RelativeToolTip": "Data\\IDAlumno.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAA8AAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-08T00:16:47.067Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DAlumnos.cs",
+              "DocumentMoniker": "C:\\Dav Pru\\mi repo\\TichJunio2024David\\TEMA ASP.NET\\HolaMundoTresCapas\\Data\\DAlumnos.cs",
+              "RelativeDocumentMoniker": "Data\\DAlumnos.cs",
+              "ToolTip": "C:\\Dav Pru\\mi repo\\TichJunio2024David\\TEMA ASP.NET\\HolaMundoTresCapas\\Data\\DAlumnos.cs*",
+              "RelativeToolTip": "Data\\DAlumnos.cs*",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAiwBEAAABWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-08T00:16:39.27Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

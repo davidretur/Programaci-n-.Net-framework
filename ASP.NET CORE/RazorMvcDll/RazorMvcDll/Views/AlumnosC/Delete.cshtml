@@ -1,0 +1,50 @@
+﻿@using System.ComponentModel.DataAnnotations
+@using CapaEntidades;
+@model Alumno
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+@using (Html.BeginForm())
+{
+    <dl>
+
+        <dt>id</dt>
+        <dd>@Html.DisplayFor(m => m.id)</dd>
+        <dt>@Html.DisplayNameFor(m => m.nombre)</dt>
+        <dd>@Html.DisplayFor(m => m.nombre)</dd>
+        <dt>Primer Apellido</dt>
+        <dd>@Html.DisplayFor(m => m.primerApellido)</dd>
+        <dt>Segundo Apellido</dt>
+        <dd>@Html.DisplayFor(m => m.segundoApellido)</dd>
+        <dt>Telefono</dt>
+        <dd>@Html.DisplayFor(m => m.telefono)</dd>
+        <dt>Correo</dt>
+        <dd>@Html.DisplayFor(m => m.correo)</dd>
+        <dt>@Html.DisplayNameFor(m => m.estado)</dt>
+        <dd>@Html.DisplayFor(m => m.estado)</dd>
+        <dt>Estatus</dt>
+        <dd>@Html.DisplayFor(m => m.estatus)</dd>
+        <p>Estas seguro de eliminar a este alumno</p>
+        <div class="form-group">
+            <div class="col-md-10">
+                @Html.EditorFor(m => m.id, new { htmlAttributes = new { @class = "form-control", @style = "display: none", @value = Model.id } })
+            </div>
+        </div>
+    </dl>
+
+    <!-- Botón de enviar -->
+    <button type="submit" class="btn btn-danger">Eliminar</button>
+
+}
+
+<div class="form-group">
+    <div class="col-md-offset-2 col-md-4">
+        <a>@Html.ActionLink("Regresar a la lista", "Index", "AlumnosC", null)</a>
+    </div>
+</div>
+
+

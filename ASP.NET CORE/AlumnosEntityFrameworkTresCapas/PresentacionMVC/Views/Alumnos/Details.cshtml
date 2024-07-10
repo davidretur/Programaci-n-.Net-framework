@@ -1,0 +1,151 @@
+﻿@model CapaEntidades.Alumnos
+
+@{
+    ViewBag.Title = "Detalles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container mt-4">
+    <h2>Detalles</h2>
+
+    <div>
+        <h4>Datos del Alumno</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <span id="id" class="hidden">@Html.DisplayFor(model => model.id)</span>
+            <dt>
+                @Html.DisplayNameFor(model => model.nombre)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.nombre)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.primerApellido)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.primerApellido)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.segundoApellido)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.segundoApellido)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.correo)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.correo)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.telefono)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.telefono)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.fechaNacimiento)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.fechaNacimiento)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.curp)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.curp)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.sueldo)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.sueldo)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.idEstadoOrigen)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.idEstadoOrigen)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.idEstatus)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.idEstatus)
+            </dd>
+
+        </dl>
+    </div>
+    <div class="form-group">
+        <div class="col-md-2">
+            <input type="button" value="Calcular IMSS" class="btn btn-success" onclick="IMSS()">
+        </div>
+        <div class="col-md-2">
+            <input type="button" value="Calcular ISR" class="btn btn-success" onclick="ISR()">
+        </div>
+    </div>
+    <hr />
+    <div class="form-group">
+        <div class="col-md-2">
+            @Html.ActionLink("Editar", "Edit", new { id = Model.id }, htmlAttributes: new { @class = "btn btn-primary" })
+        </div>
+        @Html.ActionLink("Regresar a la lista", "Index")
+    </div>
+    <!-- Ventana Modal -->
+    <div class="modal fade" id="ventanaModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Encabezado -->
+                <div class="modal-header">
+                    <h4 id="tituloModal" class="modal-title">Detalle Alumno</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Cuerpo -->
+                <div class="modal-body" id="cuerpoModal">
+        
+
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <script type="text/javascript">
+    function IMSS() {
+        var id = $("#id").text();
+        $("#tituloModal").text("Aportaciones IMSS");
+        var urlAction = "@Url.Action("_AportacionesIMSS", "Alumnos")" + "/" + id;
+        llamadoAjaxGEThtml(urlAction, muestraModal);
+    }
+    function ISR() {
+        var id = $("#id").text();
+        $("#tituloModal").text("Cálculo ISR");
+        var urlAction = "@Url.Action("_ItemTablaIsr", "Alumnos")" + "/" + id;
+        llamadoAjaxGEThtml(urlAction, muestraModal);
+    }
+
+    function muestraModal(response) {
+        $("#cuerpoModal").html(response);
+        $("#ventanaModal").modal();
+    }
+    </script>

@@ -1,0 +1,102 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Bienvenido</h2>
+
+
+@{
+    var fechaHora = "";
+    var ampm = "";
+    fechaHora = Convert.ToString(DateTime.Now);
+}
+
+<p> Hoy es: @fechaHora @ampm</p>
+<h4>Saludos dependiendo  la hora - parrafos dentro del bloque</h4>
+@{
+    var tipoSaludo = "";
+    if (DateTime.Now.Hour > 5 && DateTime.Now.Hour < 12)
+    { tipoSaludo = "Buenos días"; }
+    else if (DateTime.Now.Hour > 1 && DateTime.Now.Hour < 19)
+    { tipoSaludo = "Buenas Tardes"; }
+    else if (DateTime.Now.Hour > 1 && DateTime.Now.Hour < 19)
+    { tipoSaludo = "Buenas noches"; }
+}
+
+<p> Hola @tipoSaludo</p>
+
+<ol>
+    @{
+        foreach (var item in Request.ServerVariables)
+        {
+            if (item.Equals("URL"))
+            {
+                <p>@item</p>
+            }
+        }
+    }
+</ol>
+
+<ol>
+    @{
+        <p>El request url: @Request.Url</p>
+        <p>El request FilePath: @Request.FilePath</p>
+        <p>El request Pathfísico del recurso: @Request.PathInfo</p>
+        <p>El RequestType: @Request.RequestType</p>
+    }
+</ol>
+
+@* Crear el Método y la Vista Ciclos. Incluir en la vista, el código razor ( html y c#)
+    utilizando instrucciones de ciclos, para mostrar lo siguiente:*@
+
+@{
+    int suma = 0;
+}
+<h3>Parrafos formados dinamicamente - For</h3>
+@for (int i = 1; i <= 10; i++)
+{
+    var id = "p" + i.ToString();
+    <p id="@id">Parrafos con id: @id</p>
+    suma += i;
+}
+<p>La Suma es @suma</p>
+
+<h3>Diccionario Extraido</h3>
+
+@{
+    var Diccionario = new Dictionary<string, string>()
+{
+        {"Http","Es un potocolo de acceso...."},
+        {"Class","Es una plantilla para la creacion de objetos...."},
+        {"Html","Es un Lenguaje de marca que se utiliza para declarar objetos Dom...."}
+    };
+}
+
+<dl>
+    <dt>Http</dt>
+    <dd>@Diccionario["Http"]</dd>
+    <dt>Class</dt>
+    <dd>@Diccionario["Class"]</dd>
+    <dt>Html</dt>
+    <dd>@Diccionario["Html"]</dd>
+</dl>
+
+<h3>Crear una lista ordenada de html con las variables del servidor del objeto Request</h3>
+
+@{
+
+    var serverVariableKeys = Request.ServerVariables.AllKeys;
+        <ol>
+            @for (int i = 0; i < Math.Min(serverVariableKeys.Length, 13); i++)
+            {
+                <li><strong>@serverVariableKeys[i]</strong></li>
+            }
+        </ol>
+    
+}
+
+
+
+

@@ -1,0 +1,97 @@
+﻿@model IEnumerable<CapaEntidades.EstatusAlumnos>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container mt-4">
+    <h2>Lista Estatus Alumnos</h2>
+
+    <p>
+        @Html.ActionLink("Agregar", "Create", null, htmlAttributes: new { @class = "btn btn-success" })
+    </p>
+    <table class="table">
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Clave)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                
+                <td>
+                    <span id="id" class="hidden">@Html.DisplayFor(model => item.id)</span>
+                    @Html.DisplayFor(modelItem => item.Clave)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new { id = item.id }, htmlAttributes: new { @class = "btn btn-success" })
+                </td>
+                <td>
+                    @Html.ActionLink("Detalles", "Details", new { id = item.id }, htmlAttributes: new { @class = "btn btn-primary" })
+                </td>
+                <td>
+                    @Html.ActionLink("Eliminar", "Delete", new { id = item.id }, htmlAttributes: new { @class = "btn btn-danger" })
+                </td>
+                <td>
+                    <button class="btn btn-outline-danger" onclick="btnMostrarUsuario(@Html.DisplayFor(modelItem => item.id))">EliminarModal</button>
+                </td>
+            </tr>
+        }
+    </table>
+    <nav aria-label="Page navigation">
+        <ul class="pagination">
+            @if (ViewBag.TotalPages > 1)
+            {
+                for (int i = 1; i <= ViewBag.TotalPages; i++)
+                {
+                    <li class="page-item @(i == ViewBag.CurrentPage ? "active" : "")">
+                        @Html.ActionLink(i.ToString(), "Index", new { page = i }, new { @class = "page-link" })
+                    </li>
+                }
+            }
+        </ul>
+    </nav>
+    <!-- Ventana Modal -->
+    <div class="modal fade" id="modalUsuario" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Encabezado -->
+                <div class="modal-header">
+                    <h4 id="tituloModal" class="modal-title">Detalle Del Estatus</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Cuerpo -->
+                <div class="modal-body" id="detalleUsuario">
+                </div>
+
+                <!-- Pie de Ventana -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<script type="text/javascript">
+    function btnMostrarUsuario(id) {
+        var usuarioId = id;
+        obtenerUsuarioPorId(usuarioId);
+    }
+</script>

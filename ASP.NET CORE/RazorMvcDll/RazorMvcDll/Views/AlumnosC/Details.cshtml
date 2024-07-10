@@ -1,0 +1,32 @@
+﻿@using CapaEntidades;
+@model Alumno
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<dl>
+    <dt>id</dt>
+    <dd>@Html.DisplayFor(m => m.id)</dd>
+    <dt>@Html.DisplayNameFor(m => m.nombre)</dt>
+    <dd>@Html.DisplayFor(m => m.nombre)</dd>
+    <dt>Primer Apellido</dt>
+    <dd>@Html.DisplayFor(m => m.primerApellido)</dd>
+    <dt>Segundo Apellido</dt>
+    <dd>@Html.DisplayFor(m => m.segundoApellido)</dd>
+    <dt>Telefono</dt>
+    <dd>@Html.DisplayFor(m => m.telefono)</dd>
+    <dt>Correo</dt>
+    <dd>@Html.DisplayFor(m => m.correo)</dd>
+    <dt>@Html.DisplayNameFor(m => m.estado)</dt>
+    <dd>@Html.DisplayFor(m => m.estado)</dd>
+    <dt>Estatus</dt>
+    <dd>@Html.DisplayFor(m => m.estatus)</dd>
+</dl>
+<div class="form-group">
+    <div class="col-md-offset-2 col-md-4">
+        @Html.ActionLink("Regresar a Inicio", "Index", "AlumnosC", null, htmlAttributes: new { @class = "btn btn-success" })
+    </div>
+</div>

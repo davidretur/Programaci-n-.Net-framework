@@ -1,0 +1,14 @@
+overrruid sobrescvribe l metodo para modoficar los datos
+metodo abstraccto la derivada de persona darle funcionalidad en asicnar clave
+virtual para posteriormente hacerlo overrid
+sobrescribiendo el metodo con override string tostring().
+para que regrese cadenas
+mc muetra consola
+lista item base
+
+item base clase abstracta...
+herencia de la clase item base tiene que implementar el metodo overrid
+
+metodo abstarcto es item
+
+propiedad de solo lectura de metodo get sin set

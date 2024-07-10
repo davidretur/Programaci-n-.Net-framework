@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulario con elementos y validación</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+    <h2>Formulario de Contacto</h2>
+    <form id="formulario">
+        <div class="form-group">
+            <label for="nombre">id:</label>
+            <input type="text" id="id" name="id" required>
+          </div>
+      <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Edad:</label>
+        <input type="text" id="edad" name="edad" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Estado Origen:</label>
+        <input type="text" id="estadoOrigen" name="estadoOrigen" required>
+      </div>
+
+      <div class="form-group">
+        <input type="checkbox" id="estatus" name="estatus">
+        <label for="suscripcion">Estatus</label>
+      </div>
+      <div class="form-group">
+        <button type="button" id="consultar">Enviar</button>
+        <button type="button" id="guardar">Guardar</button>
+      </div>
+    </form>
+  </div>
+</body>
+<script src="../CRUDAlumnosHTML/js/app.js"></script>
+</html>

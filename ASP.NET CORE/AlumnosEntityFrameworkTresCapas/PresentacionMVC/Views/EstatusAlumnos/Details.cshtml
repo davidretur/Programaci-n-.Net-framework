@@ -1,0 +1,36 @@
+﻿@model CapaEntidades.EstatusAlumnos
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4">
+    <h2>Datos del Estado</h2>
+
+    <div>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Clave)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Clave)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Nombre)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Editar", "Edit", new { id = Model.id }, htmlAttributes: new { @class = "btn btn-primary" })
+        @Html.ActionLink("Regresar a la Lista", "Index")
+    </p>
+    </div>

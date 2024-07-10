@@ -1,0 +1,97 @@
+﻿@model IEnumerable<CapaEntidades.Alumnos>
+
+@{
+    ViewBag.Title = "IndexSegPag";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container mt-4">
+    <h2>Index Segunda Paginacion</h2>
+
+    <p>
+        @Html.ActionLink("Create New", "Create", null, htmlAttributes: new { @class = "btn btn-primary" })
+    </p>
+    <table class="table table-hover">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.primerApellido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.segundoApellido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.correo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.telefono)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Estados.nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstatusAlumnos.Clave)
+            </th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.primerApellido)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.segundoApellido)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.correo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.telefono)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Estados.nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EstatusAlumnos.Clave)
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new { id = item.id }, htmlAttributes: new { @class = "btn btn-success" })
+                </td>
+                <td>
+                    @Html.ActionLink("Detalles", "Details", new { id = item.id }, htmlAttributes: new { @class = "btn btn-primary" })
+                </td>
+                <td>
+                    @Html.ActionLink("Eliminar", "Delete", new { id = item.id }, htmlAttributes: new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+        }
+
+    </table>
+    <nav aria-label="Page navigation">
+        <ul class="pagination">
+            @if (ViewBag.TotalPages > 1)
+            {
+                for (int i = 1; i <= ViewBag.TotalPages; i++)
+                {
+                    <li class="page-item @(i == ViewBag.CurrentPage ? "active" : "")">
+                        @Html.ActionLink(i.ToString(), "IndexSegPag", new { page = i }, new { @class = "page-link" })
+                    </li>
+                }
+            }
+        </ul>
+    </nav>
+    </div>

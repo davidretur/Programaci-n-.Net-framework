@@ -1,0 +1,40 @@
+﻿@model CapaEntidades.EstatusAlumnos
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4">
+    <h3>Estas seguro de eliminar este Estatus?</h3>
+    <div>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Clave)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Clave)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Nombre)
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <div class="form-actions no-color">
+                <input type="submit" value="Eliminar Permanentemente" class="btn btn-danger" /> |
+                @Html.ActionLink("Regresar a la Lista", "Index")
+            </div>
+        }
+    </div>
+</div>
